@@ -3,7 +3,7 @@ const abi = require('./abi')
 
 const main = async () => {
   const  web3js = new Web3(
-    new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/d18d0447b35949089cdac96f1ba3d43c")
+    new Web3.providers.HttpProvider(process.env.ETH_URL)
   );
   const myContract = new web3js.eth.Contract(
     abi,
